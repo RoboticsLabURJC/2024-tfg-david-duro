@@ -24,10 +24,10 @@ AGENT_ID: Final[str] = "Agent"
 class KeepLaneAgent(Agent):
     def get_user_input(self):
         print("Select option:")
-        print("0: Up")
-        print("1: Down")
-        print("2: Right")
-        print("3: Left")
+        print("0: Accelerate")
+        print("1: Slow down")
+        print("2: Left")
+        print("3: Right")
         
         choice = input("Option number: ")
         return choice
@@ -92,3 +92,4 @@ if __name__ == "__main__":
         num_episodes=args.episodes,
         max_episode_steps=args.max_episode_steps,
     )
+
