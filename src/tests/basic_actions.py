@@ -9,60 +9,48 @@ logging.basicConfig(level=logging.ERROR)
 warnings.filterwarnings("ignore")
 
 import gymnasium as gym
-import numpy as np
 
 SMARTS_REPO_PATH = Path(__file__).parents[1].absolute()
 sys.path.insert(0, str(SMARTS_REPO_PATH))
-
 from examples.tools.argument_parser import minimal_argument_parser
 from smarts.core.agent import Agent
-from smarts.core.agent_interface import AgentInterface, ActionSpaceType
+from smarts.core.agent_interface import AgentInterface, AgentType
 from smarts.core.utils.episodes import episodes
 from smarts.env.gymnasium.wrappers.single_agent import SingleAgent
 from smarts.sstudio.scenario_construction import build_scenarios
 
-# Importamos la clase ActuatorDynamicController
-from smarts.core.controllers.actuator_dynamic_controller import ActuatorDynamicControllerState
-
 AGENT_ID: Final[str] = "Agent"
 
 class KeepLaneAgent(Agent):
-    def __init__(self):
-        self.state = ActuatorDynamicControllerState()
-
     def get_user_input(self):
         print("Select option:")
         print("0: Accelerate")
         print("1: Slow down")
-        print("2: Turn left")
-        print("3: Turn right")
+        print("2: Left")
+        print("3: Right")
         
         choice = input("Option number: ")
         return choice
-
+    
     def act(self, obs, **kwargs):
-        throttle, brake, steering_rate = 0.0, 0.0, 0.0  # Default action
-
         action = self.get_user_input()
-
-        if action == '0':  # Accelerate
-            throttle = 0.8
-        elif action == '1':  # Slow down
-            brake = 0.8
-        elif action == '2':  # Turn left
-            steering_rate = -0.5
-        elif action == '3':  # Turn right
-            steering_rate = 0.5
+        
+        # Map the user input to the respective action number
+        if action == '1':
+            return 1
+        elif action == '2':
+            return 2
+        elif action == '3':
+            return 3
+        elif action == '0':
+            return 0
         else:
-            print("Invalid option. Defaulting to no action.")
-
-        return throttle, brake, steering_rate
+            print("Invalid option. Using default option.")
+            return 0
 
 def main(scenarios, headless, num_episodes, max_episode_steps=None):
-    # Configuración de la interfaz del agente para usar el espacio de acción ActuatorDynamic
-    agent_interface = AgentInterface(
-        action=ActionSpaceType.ActuatorDynamic,  # Aquí se define el espacio de acción
-        max_episode_steps=max_episode_steps
+    agent_interface = AgentInterface.from_type(
+        AgentType.Laner, max_episode_steps=max_episode_steps
     )
 
     env = gym.make(
@@ -104,3 +92,4 @@ if __name__ == "__main__":
         num_episodes=args.episodes,
         max_episode_steps=args.max_episode_steps,
     )
+
