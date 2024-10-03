@@ -21,19 +21,18 @@ from smarts.core.utils.episodes import episodes
 from smarts.env.gymnasium.wrappers.single_agent import SingleAgent
 from smarts.sstudio.scenario_construction import build_scenarios
 
-# Importamos la clase ActuatorDynamicController
-from smarts.core.controllers.actuator_dynamic_controller import ActuatorDynamicControllerState
+from smarts.core.controllers.direct_controller import DirectController
 
 AGENT_ID: Final[str] = "Agent"
 
 class KeepLaneAgent(Agent):
     def __init__(self):
-        self.state = ActuatorDynamicControllerState()
+        self.state = DirectController()
 
     def get_user_input(self):
         print("Select option:")
         print("0: Accelerate")
-        print("1: Slow down")
+        print("1: Go back")
         print("2: Turn left")
         print("3: Turn right")
         
@@ -41,27 +40,28 @@ class KeepLaneAgent(Agent):
         return choice
 
     def act(self, obs, **kwargs):
-        throttle, brake, steering_rate = 0.0, 0.0, 0.0  # Default action
+        v, w = 0.0, 0.0  # Default action
 
         action = self.get_user_input()
 
         if action == '0':  # Accelerate
-            throttle = 0.8
+            v = 2
         elif action == '1':  # Slow down
-            brake = 0.8
+            v = -20
         elif action == '2':  # Turn left
-            steering_rate = -0.5
+            v = 1
+            w = -0.5
         elif action == '3':  # Turn right
-            steering_rate = 0.5
+            v = 1
+            w = 0.5
         else:
             print("Invalid option. Defaulting to no action.")
 
-        return throttle, brake, steering_rate
+        return v, w
 
 def main(scenarios, headless, num_episodes, max_episode_steps=None):
-    # Configuración de la interfaz del agente para usar el espacio de acción ActuatorDynamic
     agent_interface = AgentInterface(
-        action=ActionSpaceType.ActuatorDynamic,  # Aquí se define el espacio de acción
+        action=ActionSpaceType.Direct,  # Aquí se define el espacio de acción
         max_episode_steps=max_episode_steps
     )
 
