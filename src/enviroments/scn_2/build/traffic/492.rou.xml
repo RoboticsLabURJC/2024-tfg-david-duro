@@ -1,0 +1,614 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2024-10-21 21:36:06 by Eclipse SUMO duarouter Version 1.20.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/duarouterConfiguration.xsd">
+
+    <input>
+        <net-file value="/home/duro/SMARTS/scenarios/sumo/personal_scenarios/scn_2/map.net.xml"/>
+        <route-files value="/tmp/tmp15tg_xfm/trips.trips.xml"/>
+    </input>
+
+    <output>
+        <output-file value="/home/duro/SMARTS/scenarios/sumo/personal_scenarios/scn_2/build/traffic/492.rou.xml"/>
+    </output>
+
+    <processing>
+        <unsorted-input value="true"/>
+        <repair value="true"/>
+    </processing>
+
+    <report>
+        <error-log value="/home/duro/.smarts/_duarouter_routing/traffic/492.log"/>
+        <ignore-errors value="false"/>
+        <no-step-log value="true"/>
+    </report>
+
+    <random_number>
+        <seed value="534"/>
+    </random_number>
+
+</configuration>
+-->
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <vType id="car--13807" minGap="2.50" maxSpeed="55.50" speedFactor="normc(1.00,0.10,0.20,2.00)" vClass="passenger" accel="2.6" decel="4.5" sigma="0.5"/>
+    <vehicle id="car-E8_0_20-E1_1_max--75555-899035-0-0.0" type="car--13807" depart="0.50" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E8 E1"/>
+    </vehicle>
+    <vehicle id="car-E6_1_20-E4_1_max-828991--78225-2-0.0" type="car--13807" depart="0.56" departLane="1" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E6 E4"/>
+    </vehicle>
+    <vehicle id="car-E3_2_20-E5_2_max--87384-322505-1-0.0" type="car--13807" depart="1.93" departLane="2" departPos="20.00" departSpeed="0.00" arrivalLane="2" arrivalPos="max">
+        <route edges="E3 E5"/>
+    </vehicle>
+    <vehicle id="car-E2_0_20-E5_0_max--81662-460322-3-0.0" type="car--13807" depart="2.15" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="0" arrivalPos="max">
+        <route edges="E2 E5"/>
+    </vehicle>
+    <vehicle id="car-E2_0_20-E5_0_max--81662-460322-3-0.1" type="car--13807" depart="16.53" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="0" arrivalPos="max">
+        <route edges="E2 E5"/>
+    </vehicle>
+    <vehicle id="car-E6_1_20-E4_1_max-828991--78225-2-0.1" type="car--13807" depart="18.92" departLane="1" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E6 E4"/>
+    </vehicle>
+    <vehicle id="car-E8_0_20-E1_1_max--75555-899035-0-0.1" type="car--13807" depart="21.67" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E8 E1"/>
+    </vehicle>
+    <vehicle id="car-E3_2_20-E5_2_max--87384-322505-1-0.1" type="car--13807" depart="26.30" departLane="2" departPos="20.00" departSpeed="0.00" arrivalLane="2" arrivalPos="max">
+        <route edges="E3 E5"/>
+    </vehicle>
+    <vehicle id="car-E2_0_20-E5_0_max--81662-460322-3-0.2" type="car--13807" depart="30.91" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="0" arrivalPos="max">
+        <route edges="E2 E5"/>
+    </vehicle>
+    <vehicle id="car-E6_1_20-E4_1_max-828991--78225-2-0.2" type="car--13807" depart="37.27" departLane="1" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E6 E4"/>
+    </vehicle>
+    <vehicle id="car-E8_0_20-E1_1_max--75555-899035-0-0.2" type="car--13807" depart="42.84" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E8 E1"/>
+    </vehicle>
+    <vehicle id="car-E2_0_20-E5_0_max--81662-460322-3-0.3" type="car--13807" depart="45.28" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="0" arrivalPos="max">
+        <route edges="E2 E5"/>
+    </vehicle>
+    <vehicle id="car-E3_2_20-E5_2_max--87384-322505-1-0.2" type="car--13807" depart="50.66" departLane="2" departPos="20.00" departSpeed="0.00" arrivalLane="2" arrivalPos="max">
+        <route edges="E3 E5"/>
+    </vehicle>
+    <vehicle id="car-E6_1_20-E4_1_max-828991--78225-2-0.3" type="car--13807" depart="55.62" departLane="1" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E6 E4"/>
+    </vehicle>
+    <vehicle id="car-E2_0_20-E5_0_max--81662-460322-3-0.4" type="car--13807" depart="59.66" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="0" arrivalPos="max">
+        <route edges="E2 E5"/>
+    </vehicle>
+    <vehicle id="car-E8_0_20-E1_1_max--75555-899035-0-0.3" type="car--13807" depart="64.02" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E8 E1"/>
+    </vehicle>
+    <vehicle id="car-E6_1_20-E4_1_max-828991--78225-2-0.4" type="car--13807" depart="73.98" departLane="1" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E6 E4"/>
+    </vehicle>
+    <vehicle id="car-E2_0_20-E5_0_max--81662-460322-3-0.5" type="car--13807" depart="74.04" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="0" arrivalPos="max">
+        <route edges="E2 E5"/>
+    </vehicle>
+    <vehicle id="car-E3_2_20-E5_2_max--87384-322505-1-0.3" type="car--13807" depart="75.03" departLane="2" departPos="20.00" departSpeed="0.00" arrivalLane="2" arrivalPos="max">
+        <route edges="E3 E5"/>
+    </vehicle>
+    <vehicle id="car-E8_0_20-E1_1_max--75555-899035-0-0.4" type="car--13807" depart="85.19" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E8 E1"/>
+    </vehicle>
+    <vehicle id="car-E2_0_20-E5_0_max--81662-460322-3-0.6" type="car--13807" depart="88.41" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="0" arrivalPos="max">
+        <route edges="E2 E5"/>
+    </vehicle>
+    <vehicle id="car-E6_1_20-E4_1_max-828991--78225-2-0.5" type="car--13807" depart="92.33" departLane="1" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E6 E4"/>
+    </vehicle>
+    <vehicle id="car-E3_2_20-E5_2_max--87384-322505-1-0.4" type="car--13807" depart="99.39" departLane="2" departPos="20.00" departSpeed="0.00" arrivalLane="2" arrivalPos="max">
+        <route edges="E3 E5"/>
+    </vehicle>
+    <vehicle id="car-E2_0_20-E5_0_max--81662-460322-3-0.7" type="car--13807" depart="102.79" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="0" arrivalPos="max">
+        <route edges="E2 E5"/>
+    </vehicle>
+    <vehicle id="car-E8_0_20-E1_1_max--75555-899035-0-0.5" type="car--13807" depart="106.36" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E8 E1"/>
+    </vehicle>
+    <vehicle id="car-E6_1_20-E4_1_max-828991--78225-2-0.6" type="car--13807" depart="110.69" departLane="1" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E6 E4"/>
+    </vehicle>
+    <vehicle id="car-E2_0_20-E5_0_max--81662-460322-3-0.8" type="car--13807" depart="117.17" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="0" arrivalPos="max">
+        <route edges="E2 E5"/>
+    </vehicle>
+    <vehicle id="car-E3_2_20-E5_2_max--87384-322505-1-0.5" type="car--13807" depart="123.76" departLane="2" departPos="20.00" departSpeed="0.00" arrivalLane="2" arrivalPos="max">
+        <route edges="E3 E5"/>
+    </vehicle>
+    <vehicle id="car-E8_0_20-E1_1_max--75555-899035-0-0.6" type="car--13807" depart="127.54" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E8 E1"/>
+    </vehicle>
+    <vehicle id="car-E6_1_20-E4_1_max-828991--78225-2-0.7" type="car--13807" depart="129.04" departLane="1" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E6 E4"/>
+    </vehicle>
+    <vehicle id="car-E2_0_20-E5_0_max--81662-460322-3-0.9" type="car--13807" depart="131.55" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="0" arrivalPos="max">
+        <route edges="E2 E5"/>
+    </vehicle>
+    <vehicle id="car-E2_0_20-E5_0_max--81662-460322-3-0.10" type="car--13807" depart="145.92" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="0" arrivalPos="max">
+        <route edges="E2 E5"/>
+    </vehicle>
+    <vehicle id="car-E6_1_20-E4_1_max-828991--78225-2-0.8" type="car--13807" depart="147.39" departLane="1" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E6 E4"/>
+    </vehicle>
+    <vehicle id="car-E3_2_20-E5_2_max--87384-322505-1-0.6" type="car--13807" depart="148.12" departLane="2" departPos="20.00" departSpeed="0.00" arrivalLane="2" arrivalPos="max">
+        <route edges="E3 E5"/>
+    </vehicle>
+    <vehicle id="car-E8_0_20-E1_1_max--75555-899035-0-0.7" type="car--13807" depart="148.71" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E8 E1"/>
+    </vehicle>
+    <vehicle id="car-E2_0_20-E5_0_max--81662-460322-3-0.11" type="car--13807" depart="160.30" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="0" arrivalPos="max">
+        <route edges="E2 E5"/>
+    </vehicle>
+    <vehicle id="car-E6_1_20-E4_1_max-828991--78225-2-0.9" type="car--13807" depart="165.75" departLane="1" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E6 E4"/>
+    </vehicle>
+    <vehicle id="car-E8_0_20-E1_1_max--75555-899035-0-0.8" type="car--13807" depart="169.88" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E8 E1"/>
+    </vehicle>
+    <vehicle id="car-E3_2_20-E5_2_max--87384-322505-1-0.7" type="car--13807" depart="172.49" departLane="2" departPos="20.00" departSpeed="0.00" arrivalLane="2" arrivalPos="max">
+        <route edges="E3 E5"/>
+    </vehicle>
+    <vehicle id="car-E2_0_20-E5_0_max--81662-460322-3-0.12" type="car--13807" depart="174.68" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="0" arrivalPos="max">
+        <route edges="E2 E5"/>
+    </vehicle>
+    <vehicle id="car-E6_1_20-E4_1_max-828991--78225-2-0.10" type="car--13807" depart="184.10" departLane="1" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E6 E4"/>
+    </vehicle>
+    <vehicle id="car-E2_0_20-E5_0_max--81662-460322-3-0.13" type="car--13807" depart="189.05" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="0" arrivalPos="max">
+        <route edges="E2 E5"/>
+    </vehicle>
+    <vehicle id="car-E8_0_20-E1_1_max--75555-899035-0-0.9" type="car--13807" depart="191.05" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E8 E1"/>
+    </vehicle>
+    <vehicle id="car-E3_2_20-E5_2_max--87384-322505-1-0.8" type="car--13807" depart="196.85" departLane="2" departPos="20.00" departSpeed="0.00" arrivalLane="2" arrivalPos="max">
+        <route edges="E3 E5"/>
+    </vehicle>
+    <vehicle id="car-E6_1_20-E4_1_max-828991--78225-2-0.11" type="car--13807" depart="202.46" departLane="1" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E6 E4"/>
+    </vehicle>
+    <vehicle id="car-E2_0_20-E5_0_max--81662-460322-3-0.14" type="car--13807" depart="203.43" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="0" arrivalPos="max">
+        <route edges="E2 E5"/>
+    </vehicle>
+    <vehicle id="car-E8_0_20-E1_1_max--75555-899035-0-0.10" type="car--13807" depart="212.23" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E8 E1"/>
+    </vehicle>
+    <vehicle id="car-E2_0_20-E5_0_max--81662-460322-3-0.15" type="car--13807" depart="217.81" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="0" arrivalPos="max">
+        <route edges="E2 E5"/>
+    </vehicle>
+    <vehicle id="car-E6_1_20-E4_1_max-828991--78225-2-0.12" type="car--13807" depart="220.81" departLane="1" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E6 E4"/>
+    </vehicle>
+    <vehicle id="car-E3_2_20-E5_2_max--87384-322505-1-0.9" type="car--13807" depart="221.22" departLane="2" departPos="20.00" departSpeed="0.00" arrivalLane="2" arrivalPos="max">
+        <route edges="E3 E5"/>
+    </vehicle>
+    <vehicle id="car-E2_0_20-E5_0_max--81662-460322-3-0.16" type="car--13807" depart="232.18" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="0" arrivalPos="max">
+        <route edges="E2 E5"/>
+    </vehicle>
+    <vehicle id="car-E8_0_20-E1_1_max--75555-899035-0-0.11" type="car--13807" depart="233.40" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E8 E1"/>
+    </vehicle>
+    <vehicle id="car-E6_1_20-E4_1_max-828991--78225-2-0.13" type="car--13807" depart="239.16" departLane="1" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E6 E4"/>
+    </vehicle>
+    <vehicle id="car-E3_2_20-E5_2_max--87384-322505-1-0.10" type="car--13807" depart="245.58" departLane="2" departPos="20.00" departSpeed="0.00" arrivalLane="2" arrivalPos="max">
+        <route edges="E3 E5"/>
+    </vehicle>
+    <vehicle id="car-E2_0_20-E5_0_max--81662-460322-3-0.17" type="car--13807" depart="246.56" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="0" arrivalPos="max">
+        <route edges="E2 E5"/>
+    </vehicle>
+    <vehicle id="car-E8_0_20-E1_1_max--75555-899035-0-0.12" type="car--13807" depart="254.57" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E8 E1"/>
+    </vehicle>
+    <vehicle id="car-E6_1_20-E4_1_max-828991--78225-2-0.14" type="car--13807" depart="257.52" departLane="1" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E6 E4"/>
+    </vehicle>
+    <vehicle id="car-E2_0_20-E5_0_max--81662-460322-3-0.18" type="car--13807" depart="260.94" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="0" arrivalPos="max">
+        <route edges="E2 E5"/>
+    </vehicle>
+    <vehicle id="car-E3_2_20-E5_2_max--87384-322505-1-0.11" type="car--13807" depart="269.95" departLane="2" departPos="20.00" departSpeed="0.00" arrivalLane="2" arrivalPos="max">
+        <route edges="E3 E5"/>
+    </vehicle>
+    <vehicle id="car-E2_0_20-E5_0_max--81662-460322-3-0.19" type="car--13807" depart="275.32" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="0" arrivalPos="max">
+        <route edges="E2 E5"/>
+    </vehicle>
+    <vehicle id="car-E8_0_20-E1_1_max--75555-899035-0-0.13" type="car--13807" depart="275.75" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E8 E1"/>
+    </vehicle>
+    <vehicle id="car-E6_1_20-E4_1_max-828991--78225-2-0.15" type="car--13807" depart="275.87" departLane="1" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E6 E4"/>
+    </vehicle>
+    <vehicle id="car-E2_0_20-E5_0_max--81662-460322-3-0.20" type="car--13807" depart="289.69" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="0" arrivalPos="max">
+        <route edges="E2 E5"/>
+    </vehicle>
+    <vehicle id="car-E6_1_20-E4_1_max-828991--78225-2-0.16" type="car--13807" depart="294.23" departLane="1" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E6 E4"/>
+    </vehicle>
+    <vehicle id="car-E3_2_20-E5_2_max--87384-322505-1-0.12" type="car--13807" depart="294.31" departLane="2" departPos="20.00" departSpeed="0.00" arrivalLane="2" arrivalPos="max">
+        <route edges="E3 E5"/>
+    </vehicle>
+    <vehicle id="car-E8_0_20-E1_1_max--75555-899035-0-0.14" type="car--13807" depart="296.92" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E8 E1"/>
+    </vehicle>
+    <vehicle id="car-E2_0_20-E5_0_max--81662-460322-3-0.21" type="car--13807" depart="304.07" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="0" arrivalPos="max">
+        <route edges="E2 E5"/>
+    </vehicle>
+    <vehicle id="car-E6_1_20-E4_1_max-828991--78225-2-0.17" type="car--13807" depart="312.58" departLane="1" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E6 E4"/>
+    </vehicle>
+    <vehicle id="car-E8_0_20-E1_1_max--75555-899035-0-0.15" type="car--13807" depart="318.09" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E8 E1"/>
+    </vehicle>
+    <vehicle id="car-E2_0_20-E5_0_max--81662-460322-3-0.22" type="car--13807" depart="318.45" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="0" arrivalPos="max">
+        <route edges="E2 E5"/>
+    </vehicle>
+    <vehicle id="car-E3_2_20-E5_2_max--87384-322505-1-0.13" type="car--13807" depart="318.68" departLane="2" departPos="20.00" departSpeed="0.00" arrivalLane="2" arrivalPos="max">
+        <route edges="E3 E5"/>
+    </vehicle>
+    <vehicle id="car-E6_1_20-E4_1_max-828991--78225-2-0.18" type="car--13807" depart="330.93" departLane="1" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E6 E4"/>
+    </vehicle>
+    <vehicle id="car-E2_0_20-E5_0_max--81662-460322-3-0.23" type="car--13807" depart="332.82" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="0" arrivalPos="max">
+        <route edges="E2 E5"/>
+    </vehicle>
+    <vehicle id="car-E8_0_20-E1_1_max--75555-899035-0-0.16" type="car--13807" depart="339.27" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E8 E1"/>
+    </vehicle>
+    <vehicle id="car-E3_2_20-E5_2_max--87384-322505-1-0.14" type="car--13807" depart="343.04" departLane="2" departPos="20.00" departSpeed="0.00" arrivalLane="2" arrivalPos="max">
+        <route edges="E3 E5"/>
+    </vehicle>
+    <vehicle id="car-E2_0_20-E5_0_max--81662-460322-3-0.24" type="car--13807" depart="347.20" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="0" arrivalPos="max">
+        <route edges="E2 E5"/>
+    </vehicle>
+    <vehicle id="car-E6_1_20-E4_1_max-828991--78225-2-0.19" type="car--13807" depart="349.29" departLane="1" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E6 E4"/>
+    </vehicle>
+    <vehicle id="car-E8_0_20-E1_1_max--75555-899035-0-0.17" type="car--13807" depart="360.44" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E8 E1"/>
+    </vehicle>
+    <vehicle id="car-E2_0_20-E5_0_max--81662-460322-3-0.25" type="car--13807" depart="361.58" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="0" arrivalPos="max">
+        <route edges="E2 E5"/>
+    </vehicle>
+    <vehicle id="car-E3_2_20-E5_2_max--87384-322505-1-0.15" type="car--13807" depart="367.41" departLane="2" departPos="20.00" departSpeed="0.00" arrivalLane="2" arrivalPos="max">
+        <route edges="E3 E5"/>
+    </vehicle>
+    <vehicle id="car-E6_1_20-E4_1_max-828991--78225-2-0.20" type="car--13807" depart="367.64" departLane="1" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E6 E4"/>
+    </vehicle>
+    <vehicle id="car-E2_0_20-E5_0_max--81662-460322-3-0.26" type="car--13807" depart="375.95" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="0" arrivalPos="max">
+        <route edges="E2 E5"/>
+    </vehicle>
+    <vehicle id="car-E8_0_20-E1_1_max--75555-899035-0-0.18" type="car--13807" depart="381.61" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E8 E1"/>
+    </vehicle>
+    <vehicle id="car-E6_1_20-E4_1_max-828991--78225-2-0.21" type="car--13807" depart="386.00" departLane="1" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E6 E4"/>
+    </vehicle>
+    <vehicle id="car-E2_0_20-E5_0_max--81662-460322-3-0.27" type="car--13807" depart="390.33" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="0" arrivalPos="max">
+        <route edges="E2 E5"/>
+    </vehicle>
+    <vehicle id="car-E3_2_20-E5_2_max--87384-322505-1-0.16" type="car--13807" depart="391.77" departLane="2" departPos="20.00" departSpeed="0.00" arrivalLane="2" arrivalPos="max">
+        <route edges="E3 E5"/>
+    </vehicle>
+    <vehicle id="car-E8_0_20-E1_1_max--75555-899035-0-0.19" type="car--13807" depart="402.78" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E8 E1"/>
+    </vehicle>
+    <vehicle id="car-E6_1_20-E4_1_max-828991--78225-2-0.22" type="car--13807" depart="404.35" departLane="1" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E6 E4"/>
+    </vehicle>
+    <vehicle id="car-E2_0_20-E5_0_max--81662-460322-3-0.28" type="car--13807" depart="404.71" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="0" arrivalPos="max">
+        <route edges="E2 E5"/>
+    </vehicle>
+    <vehicle id="car-E3_2_20-E5_2_max--87384-322505-1-0.17" type="car--13807" depart="416.14" departLane="2" departPos="20.00" departSpeed="0.00" arrivalLane="2" arrivalPos="max">
+        <route edges="E3 E5"/>
+    </vehicle>
+    <vehicle id="car-E2_0_20-E5_0_max--81662-460322-3-0.29" type="car--13807" depart="419.09" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="0" arrivalPos="max">
+        <route edges="E2 E5"/>
+    </vehicle>
+    <vehicle id="car-E6_1_20-E4_1_max-828991--78225-2-0.23" type="car--13807" depart="422.70" departLane="1" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E6 E4"/>
+    </vehicle>
+    <vehicle id="car-E8_0_20-E1_1_max--75555-899035-0-0.20" type="car--13807" depart="423.96" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E8 E1"/>
+    </vehicle>
+    <vehicle id="car-E2_0_20-E5_0_max--81662-460322-3-0.30" type="car--13807" depart="433.46" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="0" arrivalPos="max">
+        <route edges="E2 E5"/>
+    </vehicle>
+    <vehicle id="car-E3_2_20-E5_2_max--87384-322505-1-0.18" type="car--13807" depart="440.50" departLane="2" departPos="20.00" departSpeed="0.00" arrivalLane="2" arrivalPos="max">
+        <route edges="E3 E5"/>
+    </vehicle>
+    <vehicle id="car-E6_1_20-E4_1_max-828991--78225-2-0.24" type="car--13807" depart="441.06" departLane="1" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E6 E4"/>
+    </vehicle>
+    <vehicle id="car-E8_0_20-E1_1_max--75555-899035-0-0.21" type="car--13807" depart="445.13" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E8 E1"/>
+    </vehicle>
+    <vehicle id="car-E2_0_20-E5_0_max--81662-460322-3-0.31" type="car--13807" depart="447.84" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="0" arrivalPos="max">
+        <route edges="E2 E5"/>
+    </vehicle>
+    <vehicle id="car-E6_1_20-E4_1_max-828991--78225-2-0.25" type="car--13807" depart="459.41" departLane="1" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E6 E4"/>
+    </vehicle>
+    <vehicle id="car-E2_0_20-E5_0_max--81662-460322-3-0.32" type="car--13807" depart="462.22" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="0" arrivalPos="max">
+        <route edges="E2 E5"/>
+    </vehicle>
+    <vehicle id="car-E3_2_20-E5_2_max--87384-322505-1-0.19" type="car--13807" depart="464.87" departLane="2" departPos="20.00" departSpeed="0.00" arrivalLane="2" arrivalPos="max">
+        <route edges="E3 E5"/>
+    </vehicle>
+    <vehicle id="car-E8_0_20-E1_1_max--75555-899035-0-0.22" type="car--13807" depart="466.30" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E8 E1"/>
+    </vehicle>
+    <vehicle id="car-E2_0_20-E5_0_max--81662-460322-3-0.33" type="car--13807" depart="476.59" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="0" arrivalPos="max">
+        <route edges="E2 E5"/>
+    </vehicle>
+    <vehicle id="car-E6_1_20-E4_1_max-828991--78225-2-0.26" type="car--13807" depart="477.77" departLane="1" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E6 E4"/>
+    </vehicle>
+    <vehicle id="car-E8_0_20-E1_1_max--75555-899035-0-0.23" type="car--13807" depart="487.48" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E8 E1"/>
+    </vehicle>
+    <vehicle id="car-E3_2_20-E5_2_max--87384-322505-1-0.20" type="car--13807" depart="489.23" departLane="2" departPos="20.00" departSpeed="0.00" arrivalLane="2" arrivalPos="max">
+        <route edges="E3 E5"/>
+    </vehicle>
+    <vehicle id="car-E2_0_20-E5_0_max--81662-460322-3-0.34" type="car--13807" depart="490.97" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="0" arrivalPos="max">
+        <route edges="E2 E5"/>
+    </vehicle>
+    <vehicle id="car-E6_1_20-E4_1_max-828991--78225-2-0.27" type="car--13807" depart="496.12" departLane="1" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E6 E4"/>
+    </vehicle>
+    <vehicle id="car-E2_0_20-E5_0_max--81662-460322-3-0.35" type="car--13807" depart="505.35" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="0" arrivalPos="max">
+        <route edges="E2 E5"/>
+    </vehicle>
+    <vehicle id="car-E8_0_20-E1_1_max--75555-899035-0-0.24" type="car--13807" depart="508.65" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E8 E1"/>
+    </vehicle>
+    <vehicle id="car-E3_2_20-E5_2_max--87384-322505-1-0.21" type="car--13807" depart="513.60" departLane="2" departPos="20.00" departSpeed="0.00" arrivalLane="2" arrivalPos="max">
+        <route edges="E3 E5"/>
+    </vehicle>
+    <vehicle id="car-E6_1_20-E4_1_max-828991--78225-2-0.28" type="car--13807" depart="514.47" departLane="1" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E6 E4"/>
+    </vehicle>
+    <vehicle id="car-E2_0_20-E5_0_max--81662-460322-3-0.36" type="car--13807" depart="519.72" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="0" arrivalPos="max">
+        <route edges="E2 E5"/>
+    </vehicle>
+    <vehicle id="car-E8_0_20-E1_1_max--75555-899035-0-0.25" type="car--13807" depart="529.82" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E8 E1"/>
+    </vehicle>
+    <vehicle id="car-E6_1_20-E4_1_max-828991--78225-2-0.29" type="car--13807" depart="532.83" departLane="1" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E6 E4"/>
+    </vehicle>
+    <vehicle id="car-E2_0_20-E5_0_max--81662-460322-3-0.37" type="car--13807" depart="534.10" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="0" arrivalPos="max">
+        <route edges="E2 E5"/>
+    </vehicle>
+    <vehicle id="car-E3_2_20-E5_2_max--87384-322505-1-0.22" type="car--13807" depart="537.96" departLane="2" departPos="20.00" departSpeed="0.00" arrivalLane="2" arrivalPos="max">
+        <route edges="E3 E5"/>
+    </vehicle>
+    <vehicle id="car-E2_0_20-E5_0_max--81662-460322-3-0.38" type="car--13807" depart="548.48" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="0" arrivalPos="max">
+        <route edges="E2 E5"/>
+    </vehicle>
+    <vehicle id="car-E8_0_20-E1_1_max--75555-899035-0-0.26" type="car--13807" depart="551.00" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E8 E1"/>
+    </vehicle>
+    <vehicle id="car-E6_1_20-E4_1_max-828991--78225-2-0.30" type="car--13807" depart="551.18" departLane="1" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E6 E4"/>
+    </vehicle>
+    <vehicle id="car-E3_2_20-E5_2_max--87384-322505-1-0.23" type="car--13807" depart="562.33" departLane="2" departPos="20.00" departSpeed="0.00" arrivalLane="2" arrivalPos="max">
+        <route edges="E3 E5"/>
+    </vehicle>
+    <vehicle id="car-E2_0_20-E5_0_max--81662-460322-3-0.39" type="car--13807" depart="562.86" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="0" arrivalPos="max">
+        <route edges="E2 E5"/>
+    </vehicle>
+    <vehicle id="car-E6_1_20-E4_1_max-828991--78225-2-0.31" type="car--13807" depart="569.54" departLane="1" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E6 E4"/>
+    </vehicle>
+    <vehicle id="car-E8_0_20-E1_1_max--75555-899035-0-0.27" type="car--13807" depart="572.17" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E8 E1"/>
+    </vehicle>
+    <vehicle id="car-E2_0_20-E5_0_max--81662-460322-3-0.40" type="car--13807" depart="577.23" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="0" arrivalPos="max">
+        <route edges="E2 E5"/>
+    </vehicle>
+    <vehicle id="car-E3_2_20-E5_2_max--87384-322505-1-0.24" type="car--13807" depart="586.69" departLane="2" departPos="20.00" departSpeed="0.00" arrivalLane="2" arrivalPos="max">
+        <route edges="E3 E5"/>
+    </vehicle>
+    <vehicle id="car-E6_1_20-E4_1_max-828991--78225-2-0.32" type="car--13807" depart="587.89" departLane="1" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E6 E4"/>
+    </vehicle>
+    <vehicle id="car-E2_0_20-E5_0_max--81662-460322-3-0.41" type="car--13807" depart="591.61" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="0" arrivalPos="max">
+        <route edges="E2 E5"/>
+    </vehicle>
+    <vehicle id="car-E8_0_20-E1_1_max--75555-899035-0-0.28" type="car--13807" depart="593.34" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E8 E1"/>
+    </vehicle>
+    <vehicle id="car-E2_0_20-E5_0_max--81662-460322-3-0.42" type="car--13807" depart="605.99" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="0" arrivalPos="max">
+        <route edges="E2 E5"/>
+    </vehicle>
+    <vehicle id="car-E6_1_20-E4_1_max-828991--78225-2-0.33" type="car--13807" depart="606.24" departLane="1" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E6 E4"/>
+    </vehicle>
+    <vehicle id="car-E3_2_20-E5_2_max--87384-322505-1-0.25" type="car--13807" depart="611.06" departLane="2" departPos="20.00" departSpeed="0.00" arrivalLane="2" arrivalPos="max">
+        <route edges="E3 E5"/>
+    </vehicle>
+    <vehicle id="car-E8_0_20-E1_1_max--75555-899035-0-0.29" type="car--13807" depart="614.51" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E8 E1"/>
+    </vehicle>
+    <vehicle id="car-E2_0_20-E5_0_max--81662-460322-3-0.43" type="car--13807" depart="620.36" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="0" arrivalPos="max">
+        <route edges="E2 E5"/>
+    </vehicle>
+    <vehicle id="car-E6_1_20-E4_1_max-828991--78225-2-0.34" type="car--13807" depart="624.60" departLane="1" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E6 E4"/>
+    </vehicle>
+    <vehicle id="car-E2_0_20-E5_0_max--81662-460322-3-0.44" type="car--13807" depart="634.74" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="0" arrivalPos="max">
+        <route edges="E2 E5"/>
+    </vehicle>
+    <vehicle id="car-E3_2_20-E5_2_max--87384-322505-1-0.26" type="car--13807" depart="635.42" departLane="2" departPos="20.00" departSpeed="0.00" arrivalLane="2" arrivalPos="max">
+        <route edges="E3 E5"/>
+    </vehicle>
+    <vehicle id="car-E8_0_20-E1_1_max--75555-899035-0-0.30" type="car--13807" depart="635.69" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E8 E1"/>
+    </vehicle>
+    <vehicle id="car-E6_1_20-E4_1_max-828991--78225-2-0.35" type="car--13807" depart="642.95" departLane="1" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E6 E4"/>
+    </vehicle>
+    <vehicle id="car-E2_0_20-E5_0_max--81662-460322-3-0.45" type="car--13807" depart="649.12" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="0" arrivalPos="max">
+        <route edges="E2 E5"/>
+    </vehicle>
+    <vehicle id="car-E8_0_20-E1_1_max--75555-899035-0-0.31" type="car--13807" depart="656.86" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E8 E1"/>
+    </vehicle>
+    <vehicle id="car-E3_2_20-E5_2_max--87384-322505-1-0.27" type="car--13807" depart="659.79" departLane="2" departPos="20.00" departSpeed="0.00" arrivalLane="2" arrivalPos="max">
+        <route edges="E3 E5"/>
+    </vehicle>
+    <vehicle id="car-E6_1_20-E4_1_max-828991--78225-2-0.36" type="car--13807" depart="661.31" departLane="1" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E6 E4"/>
+    </vehicle>
+    <vehicle id="car-E2_0_20-E5_0_max--81662-460322-3-0.46" type="car--13807" depart="663.49" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="0" arrivalPos="max">
+        <route edges="E2 E5"/>
+    </vehicle>
+    <vehicle id="car-E2_0_20-E5_0_max--81662-460322-3-0.47" type="car--13807" depart="677.87" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="0" arrivalPos="max">
+        <route edges="E2 E5"/>
+    </vehicle>
+    <vehicle id="car-E8_0_20-E1_1_max--75555-899035-0-0.32" type="car--13807" depart="678.03" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E8 E1"/>
+    </vehicle>
+    <vehicle id="car-E6_1_20-E4_1_max-828991--78225-2-0.37" type="car--13807" depart="679.66" departLane="1" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E6 E4"/>
+    </vehicle>
+    <vehicle id="car-E3_2_20-E5_2_max--87384-322505-1-0.28" type="car--13807" depart="684.15" departLane="2" departPos="20.00" departSpeed="0.00" arrivalLane="2" arrivalPos="max">
+        <route edges="E3 E5"/>
+    </vehicle>
+    <vehicle id="car-E2_0_20-E5_0_max--81662-460322-3-0.48" type="car--13807" depart="692.25" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="0" arrivalPos="max">
+        <route edges="E2 E5"/>
+    </vehicle>
+    <vehicle id="car-E6_1_20-E4_1_max-828991--78225-2-0.38" type="car--13807" depart="698.01" departLane="1" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E6 E4"/>
+    </vehicle>
+    <vehicle id="car-E8_0_20-E1_1_max--75555-899035-0-0.33" type="car--13807" depart="699.21" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E8 E1"/>
+    </vehicle>
+    <vehicle id="car-E2_0_20-E5_0_max--81662-460322-3-0.49" type="car--13807" depart="706.63" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="0" arrivalPos="max">
+        <route edges="E2 E5"/>
+    </vehicle>
+    <vehicle id="car-E3_2_20-E5_2_max--87384-322505-1-0.29" type="car--13807" depart="708.52" departLane="2" departPos="20.00" departSpeed="0.00" arrivalLane="2" arrivalPos="max">
+        <route edges="E3 E5"/>
+    </vehicle>
+    <vehicle id="car-E6_1_20-E4_1_max-828991--78225-2-0.39" type="car--13807" depart="716.37" departLane="1" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E6 E4"/>
+    </vehicle>
+    <vehicle id="car-E8_0_20-E1_1_max--75555-899035-0-0.34" type="car--13807" depart="720.38" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E8 E1"/>
+    </vehicle>
+    <vehicle id="car-E2_0_20-E5_0_max--81662-460322-3-0.50" type="car--13807" depart="721.00" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="0" arrivalPos="max">
+        <route edges="E2 E5"/>
+    </vehicle>
+    <vehicle id="car-E3_2_20-E5_2_max--87384-322505-1-0.30" type="car--13807" depart="732.88" departLane="2" departPos="20.00" departSpeed="0.00" arrivalLane="2" arrivalPos="max">
+        <route edges="E3 E5"/>
+    </vehicle>
+    <vehicle id="car-E6_1_20-E4_1_max-828991--78225-2-0.40" type="car--13807" depart="734.72" departLane="1" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E6 E4"/>
+    </vehicle>
+    <vehicle id="car-E2_0_20-E5_0_max--81662-460322-3-0.51" type="car--13807" depart="735.38" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="0" arrivalPos="max">
+        <route edges="E2 E5"/>
+    </vehicle>
+    <vehicle id="car-E8_0_20-E1_1_max--75555-899035-0-0.35" type="car--13807" depart="741.55" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E8 E1"/>
+    </vehicle>
+    <vehicle id="car-E2_0_20-E5_0_max--81662-460322-3-0.52" type="car--13807" depart="749.76" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="0" arrivalPos="max">
+        <route edges="E2 E5"/>
+    </vehicle>
+    <vehicle id="car-E6_1_20-E4_1_max-828991--78225-2-0.41" type="car--13807" depart="753.08" departLane="1" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E6 E4"/>
+    </vehicle>
+    <vehicle id="car-E3_2_20-E5_2_max--87384-322505-1-0.31" type="car--13807" depart="757.25" departLane="2" departPos="20.00" departSpeed="0.00" arrivalLane="2" arrivalPos="max">
+        <route edges="E3 E5"/>
+    </vehicle>
+    <vehicle id="car-E8_0_20-E1_1_max--75555-899035-0-0.36" type="car--13807" depart="762.73" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E8 E1"/>
+    </vehicle>
+    <vehicle id="car-E2_0_20-E5_0_max--81662-460322-3-0.53" type="car--13807" depart="764.13" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="0" arrivalPos="max">
+        <route edges="E2 E5"/>
+    </vehicle>
+    <vehicle id="car-E6_1_20-E4_1_max-828991--78225-2-0.42" type="car--13807" depart="771.43" departLane="1" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E6 E4"/>
+    </vehicle>
+    <vehicle id="car-E2_0_20-E5_0_max--81662-460322-3-0.54" type="car--13807" depart="778.51" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="0" arrivalPos="max">
+        <route edges="E2 E5"/>
+    </vehicle>
+    <vehicle id="car-E3_2_20-E5_2_max--87384-322505-1-0.32" type="car--13807" depart="781.61" departLane="2" departPos="20.00" departSpeed="0.00" arrivalLane="2" arrivalPos="max">
+        <route edges="E3 E5"/>
+    </vehicle>
+    <vehicle id="car-E8_0_20-E1_1_max--75555-899035-0-0.37" type="car--13807" depart="783.90" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E8 E1"/>
+    </vehicle>
+    <vehicle id="car-E6_1_20-E4_1_max-828991--78225-2-0.43" type="car--13807" depart="789.78" departLane="1" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E6 E4"/>
+    </vehicle>
+    <vehicle id="car-E2_0_20-E5_0_max--81662-460322-3-0.55" type="car--13807" depart="792.89" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="0" arrivalPos="max">
+        <route edges="E2 E5"/>
+    </vehicle>
+    <vehicle id="car-E8_0_20-E1_1_max--75555-899035-0-0.38" type="car--13807" depart="805.07" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E8 E1"/>
+    </vehicle>
+    <vehicle id="car-E3_2_20-E5_2_max--87384-322505-1-0.33" type="car--13807" depart="805.98" departLane="2" departPos="20.00" departSpeed="0.00" arrivalLane="2" arrivalPos="max">
+        <route edges="E3 E5"/>
+    </vehicle>
+    <vehicle id="car-E2_0_20-E5_0_max--81662-460322-3-0.56" type="car--13807" depart="807.26" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="0" arrivalPos="max">
+        <route edges="E2 E5"/>
+    </vehicle>
+    <vehicle id="car-E6_1_20-E4_1_max-828991--78225-2-0.44" type="car--13807" depart="808.14" departLane="1" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E6 E4"/>
+    </vehicle>
+    <vehicle id="car-E2_0_20-E5_0_max--81662-460322-3-0.57" type="car--13807" depart="821.64" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="0" arrivalPos="max">
+        <route edges="E2 E5"/>
+    </vehicle>
+    <vehicle id="car-E8_0_20-E1_1_max--75555-899035-0-0.39" type="car--13807" depart="826.24" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E8 E1"/>
+    </vehicle>
+    <vehicle id="car-E6_1_20-E4_1_max-828991--78225-2-0.45" type="car--13807" depart="826.49" departLane="1" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E6 E4"/>
+    </vehicle>
+    <vehicle id="car-E3_2_20-E5_2_max--87384-322505-1-0.34" type="car--13807" depart="830.34" departLane="2" departPos="20.00" departSpeed="0.00" arrivalLane="2" arrivalPos="max">
+        <route edges="E3 E5"/>
+    </vehicle>
+    <vehicle id="car-E2_0_20-E5_0_max--81662-460322-3-0.58" type="car--13807" depart="836.02" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="0" arrivalPos="max">
+        <route edges="E2 E5"/>
+    </vehicle>
+    <vehicle id="car-E6_1_20-E4_1_max-828991--78225-2-0.46" type="car--13807" depart="844.85" departLane="1" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E6 E4"/>
+    </vehicle>
+    <vehicle id="car-E8_0_20-E1_1_max--75555-899035-0-0.40" type="car--13807" depart="847.42" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E8 E1"/>
+    </vehicle>
+    <vehicle id="car-E2_0_20-E5_0_max--81662-460322-3-0.59" type="car--13807" depart="850.40" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="0" arrivalPos="max">
+        <route edges="E2 E5"/>
+    </vehicle>
+    <vehicle id="car-E3_2_20-E5_2_max--87384-322505-1-0.35" type="car--13807" depart="854.71" departLane="2" departPos="20.00" departSpeed="0.00" arrivalLane="2" arrivalPos="max">
+        <route edges="E3 E5"/>
+    </vehicle>
+    <vehicle id="car-E6_1_20-E4_1_max-828991--78225-2-0.47" type="car--13807" depart="863.20" departLane="1" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E6 E4"/>
+    </vehicle>
+    <vehicle id="car-E2_0_20-E5_0_max--81662-460322-3-0.60" type="car--13807" depart="864.77" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="0" arrivalPos="max">
+        <route edges="E2 E5"/>
+    </vehicle>
+    <vehicle id="car-E8_0_20-E1_1_max--75555-899035-0-0.41" type="car--13807" depart="868.59" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E8 E1"/>
+    </vehicle>
+    <vehicle id="car-E3_2_20-E5_2_max--87384-322505-1-0.36" type="car--13807" depart="879.07" departLane="2" departPos="20.00" departSpeed="0.00" arrivalLane="2" arrivalPos="max">
+        <route edges="E3 E5"/>
+    </vehicle>
+    <vehicle id="car-E2_0_20-E5_0_max--81662-460322-3-0.61" type="car--13807" depart="879.15" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="0" arrivalPos="max">
+        <route edges="E2 E5"/>
+    </vehicle>
+    <vehicle id="car-E6_1_20-E4_1_max-828991--78225-2-0.48" type="car--13807" depart="881.55" departLane="1" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E6 E4"/>
+    </vehicle>
+    <vehicle id="car-E8_0_20-E1_1_max--75555-899035-0-0.42" type="car--13807" depart="889.76" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E8 E1"/>
+    </vehicle>
+    <vehicle id="car-E2_0_20-E5_0_max--81662-460322-3-0.62" type="car--13807" depart="893.53" departLane="0" departPos="20.00" departSpeed="0.00" arrivalLane="0" arrivalPos="max">
+        <route edges="E2 E5"/>
+    </vehicle>
+    <vehicle id="car-E6_1_20-E4_1_max-828991--78225-2-0.49" type="car--13807" depart="899.91" departLane="1" departPos="20.00" departSpeed="0.00" arrivalLane="1" arrivalPos="max">
+        <route edges="E6 E4"/>
+    </vehicle>
+</routes>
