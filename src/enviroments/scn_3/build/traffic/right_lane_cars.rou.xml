@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2024-11-11 19:57:55 by Eclipse SUMO duarouter Version 1.20.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/duarouterConfiguration.xsd">
+
+    <input>
+        <net-file value="/home/duro/SMARTS/scenarios/sumo/personal_scenarios/scn_4/map.net.xml"/>
+        <route-files value="/tmp/tmpr4ftk_pu/trips.trips.xml"/>
+    </input>
+
+    <output>
+        <output-file value="/home/duro/SMARTS/scenarios/sumo/personal_scenarios/scn_4/build/traffic/right_lane_cars.rou.xml"/>
+    </output>
+
+    <processing>
+        <unsorted-input value="true"/>
+        <repair value="true"/>
+    </processing>
+
+    <report>
+        <error-log value="/home/duro/.smarts/_duarouter_routing/traffic/right_lane_cars.log"/>
+        <ignore-errors value="false"/>
+        <no-step-log value="true"/>
+    </report>
+
+    <random_number>
+        <seed value="42"/>
+    </random_number>
+
+</configuration>
+-->
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <vType id="car-361945" minGap="2.50" maxSpeed="55.50" speedFactor="normc(1.00,0.10,0.20,2.00)" vClass="passenger" accel="2.6" decel="4.5" sigma="0.5"/>
+    <vehicle id="car-gneE3_2_0-gneE3_2_max--40529--72949-0-0.0" type="car-361945" depart="0.00" departLane="2" departPos="0.00" departSpeed="max" arrivalLane="2" arrivalPos="max">
+        <route edges="gneE3"/>
+    </vehicle>
+</routes>
