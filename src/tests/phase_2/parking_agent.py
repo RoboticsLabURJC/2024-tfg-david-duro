@@ -3,14 +3,12 @@ import numpy as np
 import gymnasium as gym
 
 class ParkingAgent(gym.Wrapper):
-    """Un agente adaptado para estacionamiento utilizando recompensas
-    personalizadas basadas en medidas de LIDAR, con obstáculos en coordenadas relativas."""
+    """Un agente adaptado para estacionamiento utilizando medidas específicas del LIDAR."""
 
-    def __init__(self, env: gym.Env, target_position: Tuple[float, float, float]):
+    def __init__(self, env: gym.Env):
         """
         Args:
             env (gym.Env): Entorno de SMARTS para un solo agente.
-            target_position (Tuple[float, float, float]): Posición objetivo (x, y, z) para el estacionamiento.
         """
         super(ParkingAgent, self).__init__(env)
 
@@ -19,7 +17,6 @@ class ParkingAgent(gym.Wrapper):
             len(agent_ids) == 1
         ), f"Expected env to have a single agent, but got {len(agent_ids)} agents."
         self._agent_id = agent_ids[0]
-        self.target_position = np.array(target_position)
 
         if self.observation_space:
             self.observation_space = self.observation_space[self._agent_id]
@@ -30,18 +27,18 @@ class ParkingAgent(gym.Wrapper):
         """Realiza un paso en el entorno SMARTS y calcula la recompensa de estacionamiento.
 
         Args:
-            action (Any): Acción a realizar por el agente
+            action (Any): Acción a realizar por el agente.
 
         Returns:
-            Tuple[Any, float, bool, bool, Any]: Observación, recompensa, indicadores de fin de episodio y datos adicionales
+            Tuple[Any, float, bool, bool, Any]: Observación, recompensa, indicadores de fin de episodio y datos adicionales.
         """
         obs, _, terminated, truncated, info = self.env.step({self._agent_id: action})
         
         agent_obs = obs[self._agent_id]
         lidar_data = agent_obs["lidar_point_cloud"]["point_cloud"]
-        agent_position = np.array(agent_obs["ego_vehicle_state"]["position"])
+        car_pose = np.array(agent_obs["ego_vehicle_state"]["position"])
 
-        reward = self._compute_parking_reward(lidar_data, agent_position)
+        reward = self._compute_parking_reward(lidar_data, car_pose)
 
         return (
             agent_obs,
@@ -55,50 +52,49 @@ class ParkingAgent(gym.Wrapper):
         """Reinicia el entorno de SMARTS y devuelve la observación inicial.
 
         Returns:
-            Tuple[Any, Any]: Observación y datos adicionales
+            Tuple[Any, Any]: Observación y datos adicionales.
         """
         obs, info = self.env.reset(seed=seed, options=options)
         return obs[self._agent_id], info[self._agent_id]
 
-    def closest_obstacle_warning(self, measurements: np.ndarray, car_pose: np.ndarray) -> Tuple[float, float]:
-        """Convierte coordenadas absolutas de obstáculos a relativas y calcula la distancia y ángulo más cercanos.
+    def _compute_parking_reward(self, lidar_data: np.ndarray, car_pose: np.ndarray) -> float:
+        """Calcula la recompensa basada en las medidas de LIDAR a 90° y 270°.
 
         Args:
-            measurements (np.ndarray): Coordenadas absolutas de obstáculos (LIDAR).
-            car_pose (np.ndarray): Posición actual del agente.
+            lidar_data (np.ndarray): Datos del punto LIDAR alrededor del vehículo.
+            car_pose (np.ndarray): Posición actual del agente (coordenadas absolutas).
 
         Returns:
-            Tuple[float, float]: Distancia mínima y ángulo relativo al obstáculo más cercano.
+            float: Recompensa calculada.
         """
-        if np.any(measurements != 0):
-            measurements = measurements[~np.all(measurements == [0, 0, 0], axis=1)] - car_pose
-            distances = np.linalg.norm(measurements, axis=1)
-            min_distance = np.min(distances)
-            
-            closest_point = measurements[np.argmin(distances)]
-            angle_to_obstacle = np.arctan2(closest_point[1], closest_point[0])
-            
-            return min_distance, angle_to_obstacle
-        return float('inf'), 0.0
+        lidar_length = len(lidar_data)
+        index_90 = lidar_length // 4
+        index_270 = (3 * lidar_length) // 4 
 
-    def _compute_parking_reward(self, lidar_data: np.ndarray, agent_position: np.ndarray) -> float:
-        """Calcula una recompensa basada en la distancia a la posición objetivo y la proximidad a obstáculos.
+        # Asignar 'inf' a los puntos donde no hay obstáculos ([0, 0, 0]).
+        lidar_data[np.all(lidar_data == [0, 0, 0], axis=1)] = float('inf')
 
-        Args:
-            lidar_data (np.ndarray): Datos del punto LIDAR alrededor del vehículo
-            agent_position (np.ndarray): Posición actual del agente
+        relative_lidar = lidar_data - car_pose
+        distances = np.linalg.norm(relative_lidar, axis=1)
 
-        Returns:
-            float: Recompensa calculada
-        """
-        distance_to_target = np.linalg.norm(agent_position - self.target_position)
-        reward = -distance_to_target
+        distance_90 = distances[index_90]
+        distance_270 = distances[index_270]
 
-        min_obstacle_distance, angle_to_obstacle = self.closest_obstacle_warning(lidar_data, agent_position)
-        
-        if min_obstacle_distance < 0.4:
-            reward -= 6
-        elif min_obstacle_distance < 0.2:
-            reward -= 10 
+        if np.isinf(distance_90) or np.isinf(distance_270):
+            return -10.0
+
+        # Calcula la diferencia absoluta entre las dos distancias.
+        distance_difference = abs(distance_90 - distance_270)
+
+        # Rangos de recompensa según la diferencia de distancias.
+        if distance_difference < 0.5:
+            reward = 5.0  # Perfecto equilibrio.
+        # elif distance_difference < 1.0:
+        #     reward = -1.0  # Ligera penalización.
+        # elif distance_difference < 1.5:
+        #     reward = -3.0  # Penalización moderada.
+        else:
+            reward = (1/distance_difference)*2
 
         return reward
+
